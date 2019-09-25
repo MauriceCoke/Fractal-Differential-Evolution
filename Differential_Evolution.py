@@ -15,7 +15,7 @@ x = np.random.rand(Np,D)
 # Test functions
 
 # function given by PhD : f(\text{x$\_$})\text{:=}\sum _{i=1}^{\text{Dim}} \left(20 \sin \left(\frac{1}{2} \pi  (x[[i]]-2 \pi )\right)+(x[[2]]-2 \pi )^2\right)
-f = lambda x: np.sum(20*np.sin(0.5*np.pi*(x-2*np.pi))+x[2]-2*np.pi)
+f = lambda x: np.sum(20*np.sin(0.5*np.pi*(x-2*np.pi))+(x-2*np.pi)**2)
 #Ackley function (as found on wikipedia)
 f_Ack = lambda x: -20*np.exp(-0.2*np.sqrt(0.5*(x[0]**2+x[1]**2)))-np.exp(0.5*(np.cos(2*np.pi*x[0])+np.cos(2*np.pi*x[1])))+20
 
